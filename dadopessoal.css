@@ -7,7 +7,7 @@
 }
 /* LINHA */
 hr {
-    width: 50%;
+
 }
 
 /* HEADER */
@@ -49,11 +49,9 @@ aside a {
 }
 
 /* DADOS DO USUÁRIO */
-.main-content {
-    margin-left: 30%;
-}
 .main-content img {
-    border-radius: 100%;
+    text-align: center;
+    padding-left: 100%;
 }
 
 /* CAMPO NOME */
