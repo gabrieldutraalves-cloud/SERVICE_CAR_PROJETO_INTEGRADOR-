@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Usuário</title>
-    <link rel="stylesheet" href="dadopessoal.css">
+    <link rel="stylesheet" href="CSS/dadopessoal.css">
 </head>
 <body>
     <header class="header">
         <nav>
-            <img src="logo_sc.png" alt="Service car logo">
+            <a href="HTML/index.html">
+                <img src="logo_sc.png" alt="Service car logo">
+            </a>
             <h1>Área do Usuário</h1>
         </nav>
     </header>
@@ -17,104 +19,127 @@
     <main>
         
             <aside>
-                <h2><a href="">Dados gerais</a></h2>
-                <h2><a href="">Dados de Pagamento</a></h2>
+                <h2>
+                    <a href="">Dados gerais</a>
+                </h2>
+                <h2>
+                    <a href="">Dados de Pagamento</a>
+                </h2>
             </aside>
-        
         
         <div class="main-content">
             
-            <img src="logo_sc.png" alt="imagem teste">
+                <img src="logo_sc.png" alt="imagem teste">
 
-            <div class="dadosPessoais">
-                <div class="nome">
-                    <label for="nome">NOME</label>
-                    <br>
-                    <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
-                </div>
-            
-
-                <div class="cpf-nascimento">
-                    <div>
-                        <label for="cpf">CPF</label>
-                        <br>
-                        <input type="number" id="cpf" placeholder="Digite seu CPF" autocomplete="cpf" required>
-                    </div>
-
-                    <div>
-                        <label for="dataNascimento">DATA DE NASCIMENTO</label>
-                        <br>
-                        <input type="date" id="dataNascimento" placeholder="Digite sua data de nascimento" autocomplete="dataNascimento" required>
-                    </div>
-                </div>
-            </div>
-
-            <hr>
-
-            <h2>Contato</h2>
-
-            <div class="contato">
-                <div>
-                    <label for="email">E-MAIL</label>
-                    <br>    
-                    <input type="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required>
-                </div>
-
-                <div>
-                    <label for="telefone">TELEFONE</label>
-                    <br>
-                    <input type="tel" id="telefone" placeholder="Digite seu telefone" autocomplete="telefone" required>
-                </div>
-            </div>
-            <hr>
-
-            <h2>Endereço</h2>
-
-            <div class="Endereço">
-                <div>
-                    <label for="nome">CEP</label>
-                    <br>
-                    <input type="text" id="nome" placeholder="Digite seu CEP" autocomplete="nome" required>
-                </div>
-            
-                <div class="rua-numero">
-                    <div>
-                        <label for="nome">RUA</label>
+            <div class="content">
+                <div class="dadosPessoais">
+                    <div class="nome">
+                        <label for="nome">NOME</label>
                         <br>
                         <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
+                    </div>
+
+                    <div class="cpf-nascimento">
+                        <div>
+                            <form action="">
+                                <label for="cpf">CPF</label>
+                                <br>
+                                <input type="number" id="cpf" placeholder="Digite seu CPF" autocomplete="cpf" required>
+                            </form>
+                        </div>
+
+                        <div>
+                            <form action="">
+                                <label for="dataNascimento">DATA DE NASCIMENTO</label>
+                                <br>
+                                <input type="date" id="dataNascimento" placeholder="Digite sua data de nascimento" autocomplete="dataNascimento" required>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h2>Contato</h2>
+
+                <div class="contato">
+                    <div>
+                        <form action="">
+                            <label for="email">E-MAIL</label>
+                            <br>    
+                            <input type="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+                        </form>
+                    </div>
+
+                    <div>
+                        <form action="">
+                            <label for="telefone">TELEFONE</label>
+                            <br>
+                            <input type="tel" id="telefone" placeholder="Digite seu telefone" autocomplete="telefone" required>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+
+                <h2>Endereço</h2>
+
+                <div class="Endereço">
+                    <div>
+                        <form action="">
+                            <label for="nome">CEP</label>
+                            <br>
+                            <input type="text" id="nome" placeholder="Digite seu CEP" autocomplete="nome" required>
+                        </form>
                     </div>
                 
-                
-                    <div>
-                        <label for="numero">NÚMERO</label>
-                        <br>
-                        <input type="text" id="numero" placeholder="Digite seu nome" autocomplete="nome" required>
-                    </div>
-                </div>
-
-                <div class="bairro">
-                    <label for="nome">BAIRRO</label>
-                    <br>
-                    <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
-                </div>
-
-                <div class="cidade-estado">
-                    <div>
-                        <label for="nome">CIDADE</label>
-                        <br>
-                        <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
+                    <div class="rua-numero">
+                        <div>
+                            <form action="">
+                                <label for="nome">RUA</label>
+                                <br>
+                                <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
+                            </form>
+                        </div>
+                    
+                    
+                        <div>
+                            <form action="">
+                                <label for="numero">NÚMERO</label>
+                                <br>
+                                <input type="text" id="numero" placeholder="Digite seu nome" autocomplete="nome" required>
+                            </form>
+                        </div>
                     </div>
 
-                    <div>
-                        <label for="nome">ESTADO</label>
-                        <br>
-                        <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
+                    <div class="bairro">
+                        <form action="">
+                            <label for="nome">BAIRRO</label>
+                            <br>
+                            <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
+                        </form>
                     </div>
-                </div>
-        </div>
-            
-                <button type="submit">Alterar</button>
-        
+
+                    <div class="cidade-estado">
+                        <div>
+                            <form action="">
+                                <label for="nome">CIDADE</label>
+                                <br>
+                                <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
+                            </form>
+                        </div>
+
+                        <div>
+                            <form action="">
+                                <label for="nome">ESTADO</label>
+                                <br>
+                                <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <button type="submit">Alterar</button>   
+        </div>       
     </main>
 </body>
 </html>
