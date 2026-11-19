@@ -83,6 +83,13 @@ label {
     text-align: center;
 }
 
+.main-content button {
+    margin-top: 10%;
+    padding: 15px;
+    font-size: 20px;
+    margin-left: 44%;
+}
+
 .content {
     font-size: 20px;
     width: 500px;

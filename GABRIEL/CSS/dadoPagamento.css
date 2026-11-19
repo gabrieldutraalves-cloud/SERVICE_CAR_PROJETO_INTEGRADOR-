@@ -55,3 +55,21 @@ aside a {
     text-decoration: none;
     color: black;
 }
+
+.main-content button {
+    margin-top: 10%;
+    padding: 15px;
+    font-size: 20px;
+    margin-left: 44%;
+}
+
+.formaPagamento {
+    display: grid;
+    grid-row: 1fr;
+    padding: 20px
+}
+
+.formaPagamento article {
+    border: 1px solid black;
+    padding: 20px
+}
