@@ -95,17 +95,26 @@ label {
     text-align: center;
 }
 
+/* nome */
 .nome {
     padding-top: 3%;
     text-align: start;
 }
 
+/* cpf e nascimento */
 .cpf-nascimento {
     display: flex;
     padding-top: 3%;
-    justify-content: space-between;
-    gap: 10px;
-    
+    gap: 90px;
+}
+
+/* cpf */
+.CPF label {
+    text-align: start;
+}
+/* nascimento */
+.NASCIMENTO label {
+    text-align: start;
 }
 
 /* CAMPO NOME */
