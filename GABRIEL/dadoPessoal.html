@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área Usuário</title>
-    <link rel="stylesheet" href="CSS/dadopessoal.css">
+    <link rel="stylesheet" href="../GABRIEL/CSS/dadopessoal.css">
 </head>
 <body>
+    <!--Cabeçalho-->
     <header class="header">
         <nav>
-            <img src="logo_sc.png" alt="Service car logo">
+            <img src="../logo_sc.png" alt="Service car logo">
             <h1>Área do Usuário</h1>
         </nav>
     </header>
 
+    <!--Conteúdo do site-->
     <main>
+
+        <!--Aba lateral-->
         <aside>
             <h2><a href="">Dados gerais</a></h2>
             <h2><a href="">Dados de Pagamento</a></h2>
         </aside>
+
+        <!--Dados do cliente-->
         <div class="main-content">
-            <a href="C:/Users/1054629/Documents/GitHub/SERVICE_CAR_PROJETO_INTEGRADOR-/index.html"><img src="logo_sc.png" alt="imagem teste"></a>
+            <!--Área de endereço-->
+            <a href="C:/Users/1054629/Documents/GitHub/SERVICE_CAR_PROJETO_INTEGRADOR-/index.html"><img src="../logo_sc.png" alt="imagem teste"></a>
+            <!--dados pessoais-->
             <div class="dadosPessoais">
+                <!--Nome-->
                 <div class="nome">
                     <label for="nome">NOME</label>
                     <br>
                     <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
                 </div>
+                <!--CPF e Nascimento-->
                 <div class="cpf-nascimento">
                     <div>
                         <label for="cpf">CPF</label>
@@ -40,17 +50,17 @@
                     </div>
                 </div>
             </div>
-
             <hr>
-
+            <!--Área de contato-->
             <h2>Contato</h2>
-
             <div class="contato">
+                <!--Email-->
                 <div>
                     <label for="email">E-MAIL</label>
                     <br>    
                     <input type="email" id="email" placeholder="Digite seu e-mail" autocomplete="email" required>
                 </div>
+                <!--Telefone-->
                 <div>
                     <label for="telefone">TELEFONE</label>
                     <br>
@@ -58,10 +68,10 @@
                 </div>
             </div>
             <hr>
-
+            <!--Área de endereço-->
             <h2>Endereço</h2>
-
             <div class="Endereço">
+                <!--CEP-->
                 <div>
                     <label for="nome">CEP</label>
                     <br>
@@ -69,28 +79,34 @@
                 </div>
             
                 <div class="rua-numero">
+                    <!--Rua-->
                     <div>
                         <label for="nome">RUA</label>
                         <br>
                         <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
                     </div>
+                    <!--Número-->
                     <div>
                         <label for="numero">NÚMERO</label>
                         <br>
                         <input type="text" id="numero" placeholder="Digite seu nome" autocomplete="nome" required>
                     </div>
                 </div>
+                <!--Bairro-->
                 <div class="bairro">
                     <label for="nome">BAIRRO</label>
                     <br>
                     <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
                 </div>
+                <!--Cidade e Estado-->
                 <div class="cidade-estado">
+                    <!--Cidade-->
                     <div>
                         <label for="nome">CIDADE</label>
                         <br>
                         <input type="text" id="nome" placeholder="Digite seu nome" autocomplete="nome" required>
                     </div>
+                    <!--Estado-->
                     <div>
                         <label for="nome">ESTADO</label>
                         <br>
