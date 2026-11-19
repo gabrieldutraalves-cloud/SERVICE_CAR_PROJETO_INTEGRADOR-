@@ -70,6 +70,8 @@ aside a {
 }
 
 .formaPagamento article {
+    display: grid;
+    grid-row: 1fr;
     border: 1px solid black;
     padding: 20px
 }
