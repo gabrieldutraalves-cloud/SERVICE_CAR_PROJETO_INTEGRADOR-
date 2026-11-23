@@ -1,0 +1,42 @@
+/* CSS */
+/* webide-snippet:card */
+.webide-card 
+{ margin:1rem 0;
+     padding:1.25rem;
+      border:1px solid #d8e3d5;
+       border-radius:12px;
+        background:white; 
+        box-shadow:0 8px 24px #1a291f14;
+
+     }
+      .webide-card h2 {
+         margin:0 0 .5rem; }
+
+/* webide-snippet:div */
+.webide-div { margin:1rem 0;
+     padding:1rem;
+      border:1px dashed #9db69a;
+      border-radius:10px; 
+      background:#f1f6ed; }
+
+/* webide-snippet:nav */
+.webide-nav { display:flex; flex-wrap:wrap; 
+    gap:1rem; margin:1rem 0; padding:1rem;
+     border-radius:9px; background:#f1f6ed; 
+    } .webide-nav a { color:#365f2f;
+         font-weight:700; }
+
+/* webide-snippet:image */
+.webide-image { display:block;
+     width:min(100%,34rem);
+      height:auto; margin:1rem 0; 
+      border-radius:12px; 
+      object-fit:cover; }
+
+/* webide-snippet:button */
+.webide-button { display:inline-block; padding:.75rem 1.2rem;
+     border:0; border-radius:9px;
+      background:#c4f06b;
+       color:#183121;
+       font-weight:700;
+        cursor:pointer; }
