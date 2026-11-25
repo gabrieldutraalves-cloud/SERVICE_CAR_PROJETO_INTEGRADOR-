@@ -1,0 +1,124 @@
+
+/* Configurações gerais */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     background-color: #333;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ /* Container principal */
+ .container {
+     width: 97%;
+     height: 95vh;
+     margin: 8px auto;
+     background-color: #999;
+ }
+ 
+ /* Cabeçalho */
+ .cabecalho {
+     width: 100%;
+     height: 20%;
+     background-color: #00052f;
+ 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ 
+     border-top: 20px solid #102b70;
+ }
+ 
+ .cabecalho p {
+     color: white;
+     font-size: 15px;
+ }
+ 
+ /* Conteúdo */
+ .conteudo {
+     display: flex;
+     width: 100%;
+     height: 80%;
+ }
+ 
+ /* Painel da logo */
+ .painel-logo {
+     width: 59%;
+     height: 100%;
+     background-color: #080808;
+ 
+     border-right: 2px solid #ddd;
+     border-radius: 0 4px 4px 0;
+ 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ 
+     overflow: hidden;
+ }
+ 
+ .painel-logo img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ 
+ /* Painel de cadastro */
+ .painel-cadastro {
+     width: 41%;
+     height: 100%;
+     background-color: #999;
+ 
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 52px;
+ }
+ 
+ /* Título */
+ .titulo {
+     background-color: #e1e1e1;
+     padding: 12px 8px;
+     border-radius: 25px;
+     margin-bottom: 18px;
+ }
+ 
+ .titulo p {
+     font-size: 14px;
+     color: #111;
+ }
+ 
+ /* Opções */
+ .opcoes {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 13px;
+     width: 100%;
+ }
+ 
+ .botao {
+     width: 55%;
+     padding: 5px;
+     text-align: center;
+ 
+     background-color: #dedede;
+     color: #111;
+ 
+     text-decoration: none;
+     font-size: 14px;
+ 
+     border-radius: 25px;
+     transition: 0.3s;
+ }
+ 
+ /* Efeito ao passar o mouse */
+ .botao:hover {
+     background-color: #075fe0;
+     color: white;
+     transform: scale(1.05);
+ }
+ 
