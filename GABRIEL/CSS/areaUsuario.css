@@ -1,0 +1,40 @@
+/* Estilos compartilhados pelas quatro páginas da área do usuário */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --altura-header: 64px;
+    --largura-aside: 32%;
+    --azul-selecao: #6687b0;
+    --cinza: #d9d9d9;
+}
+body { font-family: Arial, Helvetica, sans-serif; color: #111; background: #fff; }
+button, input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid #245a9b; outline-offset: 3px; }
+/* HEADER */
+.header { background: linear-gradient(180deg, #142e69 0%, #03032e 92%); color: #fff; }
+.header nav { min-height: var(--altura-header); display: grid; grid-template-columns: var(--largura-aside) 1fr; align-items: center; }
+.header nav h1 { text-align: center; font-size: clamp(22px, 4vw, 34px); padding: 8px; }
+.logo { width: 50px; height: 50px; margin-left: 14px; display: grid; place-items: center; background: #09172c; border-radius: 5px; }
+.logo object { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.logo-texto { display: grid; place-content: center; height: 50px; text-align: center; font-size: 9px; font-weight: bold; color: #fff; }
+/* ASIDE */
+main { display: flex; min-height: calc(100vh - var(--altura-header)); }
+aside { flex: 0 0 var(--largura-aside); background: var(--cinza); text-align: center; }
+aside h2 { font-size: clamp(15px, 2.5vw, 20px); }
+aside a { display: block; padding: 18px 8px; }
+aside a.ativo { background: var(--azul-selecao); }
+aside a:hover { background: #b6c7da; }
+aside a.ativo:hover { background: var(--azul-selecao); }
+.main-content { flex: 1; min-width: 0; }
+/* BOTÕES */
+.botao { display: flex; justify-content: center; align-items: center; text-align: center; cursor: pointer; font-size: 13px; font-weight: bold; }
+.botao:hover { background: #c6d4e4; }
+.visualmente-oculto { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 600px) {
+    :root { --altura-header: 58px; }
+    .header nav { grid-template-columns: 70px 1fr; }
+    .logo { margin-left: 10px; width: 44px; height: 44px; }
+    main { flex-direction: column; }
+    aside { display: grid; grid-template-columns: 1fr 1fr; flex-basis: auto; }
+    aside a { padding: 14px 6px; }
+}

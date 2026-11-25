@@ -1,51 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Usuário</title>
-    <link rel="stylesheet" href="../GABRIEL/CSS/dadoPagamento.css">
+    <title>Dados de pagamento | Service Car</title>
+    <link rel="stylesheet" href="CSS/dadoPagamento.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header class="header">
-        <nav>
-            <a href="../HTML/index.html">
-                <img src="../logo_sc.png" alt="Service car logo">
+        <nav aria-label="Cabeçalho">
+            <a class="logo" href="../HTML/index.html" aria-label="Página inicial do Service Car">
+                <object data="../logo_sc.png" type="image/png" aria-label="Logo Service Car">
+                    <span class="logo-texto" aria-hidden="true">SERVICE<br>CAR</span>
+                </object>
             </a>
             <h1>Área do Usuário</h1>
         </nav>
     </header>
-
     <main>
-            <aside>
-                <h2>
-                    <a href="../GABRIEL/dadoPessoal.html">Dados gerais</a>
-                </h2>
-                <h2>
-                    <a href="../GABRIEL/dadoPagamento.html">Dados de Pagamento</a>
-                </h2>
-            </aside>
-        <div class="main-content">
-            <div class="formaPagamento">
-                <article>
-                    <img src="../GABRIEL/imagem_cartao.png" alt="imagem ilustrativa cartão">
-
-                </article>
+        <!-- Menu lateral -->
+        <aside aria-label="Menu da área do usuário">
+            <h2><a href="dadoPessoal.html">Dados gerais</a></h2>
+            <h2><a href="dadoPagamento.html" class="ativo" aria-current="true">Dados de pagamento</a></h2>
+        </aside>
+        <!-- Conteúdo principal -->
+        <section class="main-content" aria-label="Dados de pagamento">
+            <div class="pagamentos">
+                <h2>Dados de Pagamento</h2>
+                <!-- Formas de pagamento fictícias -->
+                <div class="formaPagamento">
+                    <article>
+                        <div class="titulo-pagamento"><img class="icone-cartao" src="imagem_cartao.png" alt=""><h3>Cartão de Crédito</h3></div>
+                        <p>xxxx xxxx xxxx 1234</p>
+                        <div class="acoes-pagamento">
+                            <a class="botao botao-pagamento" href="dadoPagamento_alteração.html">Alterar</a>
+                            <button class="botao botao-pagamento" type="button" disabled title="Exclusão ainda não implementada">Excluir</button>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="titulo-pagamento"><img class="icone-cartao" src="imagem_cartao.png" alt=""><h3>Cartão de Débito</h3></div>
+                        <p>xxxx xxxx xxxx 1234</p>
+                        <div class="acoes-pagamento">
+                            <a class="botao botao-pagamento" href="dadoPagamento_alteração.html">Alterar</a>
+                            <button class="botao botao-pagamento" type="button" disabled title="Exclusão ainda não implementada">Excluir</button>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="titulo-pagamento"><span class="icone-pix" aria-hidden="true">▦</span><h3>Pix</h3></div>
+                        <p>Chave pix: cliente@example.com</p>
+                        <div class="acoes-pagamento">
+                            <a class="botao botao-pagamento" href="dadoPagamento_alteração.html">Alterar</a>
+                            <button class="botao botao-pagamento" type="button" disabled title="Exclusão ainda não implementada">Excluir</button>
+                        </div>
+                    </article>
+                </div>
+                <a class="botao botao-pagamento adicionar-pagamento" href="dadoPagamento_alteração.html">Adicionar forma de pagamento</a>
             </div>
-            <div class="formaPagamento">
-                <article>
-                    <img src="../GABRIEL/imagem_cartao.png" alt="imagem ilustrativa cartão">
-                    f
-                </article>
-            </div>
-            <div class="formaPagamento">
-                <article>
-                    <img src="../GABRIEL/imagem_cartao.png" alt="imagem ilustrativa cartão">
-                    
-                </article>
-            </div>
-            <a href="../GABRIEL/dadoPagamento_alteração.html"><button type="submit">Alterar</button> </a>  
-        </div>       
+        </section>
     </main>
 </body>
 </html>

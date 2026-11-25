@@ -1,32 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área Usuário</title>
-    <link rel="stylesheet" href="../GABRIEL/CSS/dadoPagamento_alteração.css">
+    <title>Alterar dados de pagamento | Service Car</title>
+    <link rel="stylesheet" href="CSS/dadoPagamento_alteração.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header class="header">
-        <nav>
-            <a href="../HTML/index.html">
-                <img src="../logo_sc.png" alt="Service car logo">
+        <nav aria-label="Cabeçalho">
+            <a class="logo" href="../HTML/index.html" aria-label="Página inicial do Service Car">
+                <object data="../logo_sc.png" type="image/png" aria-label="Logo Service Car">
+                    <span class="logo-texto" aria-hidden="true">SERVICE<br>CAR</span>
+                </object>
             </a>
             <h1>Área do Usuário</h1>
         </nav>
     </header>
     <main>
-        <aside>
-            <h2>
-                <a href="../GABRIEL/dadoPessoal.html">Dados gerais</a>
-            </h2>
-            <h2>
-                <a href="../GABRIEL/dadoPagamento.html">Dados de Pagamento</a>
-            </h2>
+        <!-- Menu lateral -->
+        <aside aria-label="Menu da área do usuário">
+            <h2><a href="dadoPessoal.html">Dados gerais</a></h2>
+            <h2><a href="dadoPagamento.html" class="ativo" aria-current="true">Dados de pagamento</a></h2>
         </aside>
-        <div class="main-content">
-            <a href="../GABRIEL/dadoPagamento.html"></a><button type="submit">Alterar</button>   
-        </div>       
+        <!-- Conteúdo principal -->
+        <section class="main-content" aria-label="Alterar dados de pagamento">
+            <!-- Formulário visual: não envia nem armazena informações. -->
+            <div class="form-pagamento" role="group" aria-label="Formulário visual de pagamento">
+                <label class="tipo-pagamento" for="credito"><input type="radio" name="tipo" id="credito" value="credito" checked> Cartão de crédito</label>
+                <label class="tipo-pagamento" for="debito"><input type="radio" name="tipo" id="debito" value="debito"> Cartão de débito</label>
+                <label class="tipo-pagamento" for="pix"><input type="radio" name="tipo" id="pix" value="pix"> Pix</label>
+                <div class="dados-cartao">
+                    <div class="titulo-pagamento"><img class="icone-cartao" src="imagem_cartao.png" alt=""><h3>Dados do Cartão</h3></div>
+                    <div class="campos-pagamento">
+                        <div class="campo">
+                            <label for="titular">Nome impresso no cartão</label>
+                            <input autocomplete="off" type="text" id="titular" name="titular">
+                        </div>
+                        <div class="campo">
+                            <label for="cartao">Número do cartão</label>
+                            <input autocomplete="off" type="text" id="cartao" name="cartao" inputmode="numeric" maxlength="19">
+                        </div>
+                        <div class="validade-cvc">
+                            <div class="campo">
+                                <label for="validade">Validade</label>
+                                <input autocomplete="off" type="text" id="validade" name="validade" placeholder="MM/AA" maxlength="5" inputmode="numeric">
+                            </div>
+                            <div class="campo">
+                                <label for="cvc">CVC</label>
+                                <input autocomplete="off" type="password" id="cvc" name="cvc" maxlength="4" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="cpfTitular">CPF do titular</label>
+                            <input autocomplete="off" type="text" id="cpfTitular" name="cpfTitular" inputmode="numeric" maxlength="14">
+                        </div>
+                    </div>
+                </div>
+                <div class="dados-pix">
+                    <div class="titulo-pagamento"><span class="icone-pix" aria-hidden="true">▦</span><h3>Dados do Pix</h3></div>
+                    <div class="campo">
+                        <label for="chavePix">Chave Pix</label>
+                        <input autocomplete="off" type="text" id="chavePix" name="chavePix">
+                    </div>
+                </div>
+                <div class="acoes-pagamento">
+                    <a class="botao botao-pagamento" href="dadoPagamento.html">Cancelar</a>
+                    <a class="botao botao-pagamento" href="dadoPagamento.html">Adicionar</a>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>

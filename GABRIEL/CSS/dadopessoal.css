@@ -1,167 +1,34 @@
-/* Todo o site */
-* {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
+@import url("areaUsuario.css");
+/* DADOS GERAIS */
+.main-content { padding: 52px 26px 30px; }
+.content { width: 100%; max-width: 620px; margin: 0 auto; }
+/* Foto de perfil provisória, sem depender de uma imagem externa */
+.perfil { position: relative; display: grid; place-items: center; width: 118px; height: 118px; margin: 0 auto 22px; }
+.avatar { position: relative; width: 100%; height: 100%; border: 2px solid #111; border-radius: 50%; background: #d6e1ef; overflow: hidden; }
+.avatar::before { content: ""; position: absolute; top: 19%; left: 34%; width: 32%; height: 32%; border-radius: 50%; background: #6687b0; }
+.avatar::after { content: ""; position: absolute; top: 56%; left: 19%; width: 62%; height: 49%; border-radius: 48% 48% 0 0; background: #6687b0; }
+/* Formulário */
+.dadosPessoais, .contato, .endereco { padding: 0 15px; }
+.dadosPessoais, .endereco { display: grid; gap: 14px; }
+.campo { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.campo label { font-size: 12px; font-weight: bold; }
+.campo input { width: 100%; min-width: 0; height: 25px; padding: 3px 9px; border: 1px solid #a6a6a6; border-radius: 0; font-size: 13px; font-weight: 600; background: #fff; color: #111; }
+.campo input[readonly] { cursor: default; }
+.cpf-nascimento { display: grid; grid-template-columns: 2fr 3fr; gap: clamp(16px, 5vw, 48px); }
+.contato { display: grid; grid-template-columns: 3fr 2fr; gap: clamp(16px, 5vw, 44px); }
+.rua-numero, .cidade-estado { display: grid; grid-template-columns: 4fr 2fr; gap: clamp(16px, 5vw, 40px); }
+.cep { width: 39%; }
+.bairro { width: 60%; }
+.numero, .estado { width: 100%; max-width: 72px; }
+hr { border: 0; border-top: 1px solid #aaa; margin: 20px 0 14px; }
+.content h2 { font-size: 16px; text-align: center; margin-bottom: 10px; }
+.endereco { margin-top: 14px; }
+.botao-pessoal { width: 150px; min-height: 35px; margin: 36px auto 0; border: 0; border-radius: 8px; background: #d9d9d9; }
+@media (max-width: 600px) {
+    .main-content { padding: 30px 14px; }
+    .dadosPessoais, .contato, .endereco { padding: 0 6px; }
+    .perfil { width: 100px; height: 100px; }
+    .cpf-nascimento, .contato, .rua-numero, .cidade-estado { gap: 12px; }
+    .campo input { height: 32px; }
+    .cep { width: 55%; }
 }
-/* LINHA */
-hr {
-    width: 50%;
-}
-
-/* BUTTOM */
-button {
-    display: block;
-    margin: 40px auto;
-    padding: 15px 30px;
-    font-size: 20px;
-}
-
-/* HEADER */
-.header {
-    background-color: rgb(32, 61, 190);
-}
-.header nav {
-    display: flex;
-    align-items: center;
-}
-.header nav img {
-    border-radius: 100%;
-    max-height: 120px;
-    margin: 12px;
-}
-.header nav h1 {
-    color: white;
-    margin-left: 45%;
-}
-
-/* RESTANTE DO CONTEÚDO */
-main {
-    display: flex;
-    min-height: calc(100vh - 50px);
-}
-
-/* ASIDE */
-aside {
-    background-color: rgb(241, 241, 241);
-    min-width: 20%;
-    text-align: center;
-}
-aside h2 {
-    padding: 15px;
-}
-aside a {
-    text-decoration: none;
-    color: black;
-}
-
-/* DADOS DO USUÁRIO */
-hr {
-    width: 100%;
-    margin-top: 4%;
-}
-
-label {
-    text-align: start;
-}
-
-.main-content {
-    font-size: 20px;
-    width: 100%;
-}
-
-.main-content img {
-    border-radius: 100%;
-    margin-top: 20px;
-    margin-left: 43%;
-}
-
-.main-content h2 {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    text-align: center;
-}
-
-.main-content button {
-    margin-top: 10%;
-    padding: 15px;
-    font-size: 20px;
-    margin-left: 49%;
-}
-
-.content {
-    font-size: 20px;
-    width: 500px;
-    row-gap: 20px;
-    margin-left: 31%;
-}
-
-/* Dados do cliente */
-.dadosPessoais {
-    padding-top: 6%;
-    text-align: center;
-    
-
-}
-
-/* nome */
-.nome {
-    padding-top: 3%;
-    text-align: start;
-}
-
-/* cpf e nascimento */
-.cpf-nascimento {
-    display: flex;
-    padding-top: 3%;
-    gap: 90px;
-}
-
-/* cpf */
-.CPF label {
-    text-align: start;
-}
-/* nascimento */
-.NASCIMENTO label {
-    text-align: start;
-}
-
-/* CAMPO NOME */
-
-/* CONTATO */
-.contato {
-    display: flex;
-    gap: 30px;
-    row-gap: 20px;
-    padding-top: 6%;
-}
-
-.contato {
-    gap: 30px;
-    justify-content: space-between;
-    row-gap: 20px;
-}
-
-/* RUA E NÚMERO */
-.rua-numero {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    row-gap: 20px;
-    padding-top: 6%;
-}
-
-.bairro {
-    padding-top: 6%;
-}
-
-.cidade-estado {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    row-gap: 20px;
-    padding-top: 6%;
-}
-
-/* botão de alterar */
