@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- REDIRECIONAMENTO_PHP --><meta http-equiv="refresh" content="0;url=PHP/dadoPagamento.php"><!-- FIM_REDIRECIONAMENTO_PHP -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados de pagamento | Service Car</title>
@@ -22,7 +23,7 @@
         <!-- Menu lateral -->
         <aside aria-label="Menu da área do usuário">
             <h2><a href="dadoPessoal.html">Dados gerais</a></h2>
-            <h2><a href="dadoPagamento.html" class="ativo" aria-current="true">Dados de pagamento</a></h2>
+            <h2><a href="PHP/dadoPagamento.php" class="ativo" aria-current="true">Dados de pagamento</a></h2>
         </aside>
         <!-- Conteúdo principal -->
         <section class="main-content" aria-label="Dados de pagamento">
@@ -30,11 +31,12 @@
                 <h2>Dados de Pagamento</h2>
                 <!-- Formas de pagamento fictícias -->
                 <div class="formaPagamento">
+                    <!-- INICIO_PAGAMENTOS -->
                     <article>
                         <div class="titulo-pagamento"><img class="icone-cartao" src="imagem_cartao.png" alt=""><h3>Cartão de Crédito</h3></div>
                         <p>xxxx xxxx xxxx 1234</p>
                         <div class="acoes-pagamento">
-                            <a class="botao botao-pagamento" href="dadoPagamento_alteração.html">Alterar</a>
+                            <a class="botao botao-pagamento" href="PHP/dadoPagamento_alteracao.php">Alterar</a>
                             <button class="botao botao-pagamento" type="button" disabled title="Exclusão ainda não implementada">Excluir</button>
                         </div>
                     </article>
@@ -42,7 +44,7 @@
                         <div class="titulo-pagamento"><img class="icone-cartao" src="imagem_cartao.png" alt=""><h3>Cartão de Débito</h3></div>
                         <p>xxxx xxxx xxxx 1234</p>
                         <div class="acoes-pagamento">
-                            <a class="botao botao-pagamento" href="dadoPagamento_alteração.html">Alterar</a>
+                            <a class="botao botao-pagamento" href="PHP/dadoPagamento_alteracao.php">Alterar</a>
                             <button class="botao botao-pagamento" type="button" disabled title="Exclusão ainda não implementada">Excluir</button>
                         </div>
                     </article>
@@ -50,12 +52,13 @@
                         <div class="titulo-pagamento"><span class="icone-pix" aria-hidden="true">▦</span><h3>Pix</h3></div>
                         <p>Chave pix: cliente@example.com</p>
                         <div class="acoes-pagamento">
-                            <a class="botao botao-pagamento" href="dadoPagamento_alteração.html">Alterar</a>
+                            <a class="botao botao-pagamento" href="PHP/dadoPagamento_alteracao.php">Alterar</a>
                             <button class="botao botao-pagamento" type="button" disabled title="Exclusão ainda não implementada">Excluir</button>
                         </div>
                     </article>
+                    <!-- FIM_PAGAMENTOS -->
                 </div>
-                <a class="botao botao-pagamento adicionar-pagamento" href="dadoPagamento_alteração.html">Adicionar forma de pagamento</a>
+                <a class="botao botao-pagamento adicionar-pagamento" href="PHP/dadoPagamento_alteracao.php">Adicionar forma de pagamento</a>
             </div>
         </section>
     </main>

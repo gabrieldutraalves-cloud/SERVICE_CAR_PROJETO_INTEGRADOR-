@@ -22,7 +22,7 @@
         <!-- Menu lateral -->
         <aside aria-label="Menu da área do usuário">
             <h2><a href="dadoPessoal.html" class="ativo" aria-current="true">Dados gerais</a></h2>
-            <h2><a href="dadoPagamento.html">Dados de pagamento</a></h2>
+            <h2><a href="PHP/dadoPagamento.php">Dados de pagamento</a></h2>
         </aside>
         <!-- Conteúdo principal -->
         <section class="main-content" aria-label="Dados gerais">
@@ -91,10 +91,47 @@
                     </div>
                     </div>
                 </div>
-                <!-- Navegação demonstrativa: não grava os dados. -->
-                <a class="botao botao-pessoal" href="dadoPessoal_alteração.html">Alterar</a>
+                <!-- A edição acontece na página de alteração. -->
+                <a class="botao botao-pessoal" href="dadoPessoal_alteracao.html">Alterar</a>
             </div>
         </section>
     </main>
+    <script>
+        // Consulta o PHP, que é responsável pela comunicação com o MySQL.
+        const campos = ['nome', 'cpf', 'dataNascimento', 'email', 'telefone',
+                        'cep', 'rua', 'numero', 'bairro', 'cidade', 'estado'];
+        function formatar(campo, valor) {
+            if (campo === 'cpf') return valor.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4');
+            if (campo === 'cep') return valor.replace(/^(\d{5})(\d{3})$/, '$1-$2');
+            if (campo === 'telefone') return valor.replace(/^(\d{2})(\d{4,5})(\d{4})$/, '($1) $2-$3');
+            if (campo === 'dataNascimento') return valor.split('-').reverse().join('/');
+            return valor;
+        }
+        function exibirFoto(foto) {
+            if (typeof foto !== 'string' || !/^data:image\/(png|jpeg|webp);base64,/.test(foto)) return;
+            const avatar = document.querySelector('.avatar');
+            const imagem = document.createElement('img');
+            imagem.src = foto;
+            imagem.alt = 'Foto de perfil';
+            avatar.replaceChildren(imagem);
+            avatar.classList.add('com-foto');
+        }
+        async function carregarDados() {
+            try {
+                const resposta = await fetch('PHP/dadoPessoal.php', {cache: 'no-store'});
+                const resultado = await resposta.json();
+                if (!resposta.ok) throw new Error(resultado.erro || 'Erro na consulta.');
+                const dados = resultado.dados || {};
+                campos.forEach(campo => {
+                    document.getElementById(campo).value = formatar(campo, String(dados[campo] ?? ''));
+                });
+                exibirFoto(dados.foto);
+            } catch (erro) {
+                campos.forEach(campo => { document.getElementById(campo).value = ''; });
+                alert('Não foi possível carregar o perfil: ' + erro.message);
+            }
+        }
+        carregarDados();
+    </script>
 </body>
 </html>

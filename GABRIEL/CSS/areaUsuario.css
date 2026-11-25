@@ -1,7 +1,7 @@
 /* Estilos compartilhados pelas quatro páginas da área do usuário */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-    --altura-header: 64px;
+    --altura-header: 120px;
     --largura-aside: 32%;
     --azul-selecao: #6687b0;
     --cinza: #d9d9d9;
@@ -14,9 +14,9 @@ a { color: inherit; text-decoration: none; }
 .header { background: linear-gradient(180deg, #142e69 0%, #03032e 92%); color: #fff; }
 .header nav { min-height: var(--altura-header); display: grid; grid-template-columns: var(--largura-aside) 1fr; align-items: center; }
 .header nav h1 { text-align: center; font-size: clamp(22px, 4vw, 34px); padding: 8px; }
-.logo { width: 50px; height: 50px; margin-left: 14px; display: grid; place-items: center; background: #09172c; border-radius: 5px; }
+.logo { width: 96px; height: 96px; margin-left: 14px; display: grid; place-items: center; background: #09172c; border-radius: 5px; }
 .logo object { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
-.logo-texto { display: grid; place-content: center; height: 50px; text-align: center; font-size: 9px; font-weight: bold; color: #fff; }
+.logo-texto { display: grid; place-content: center; height: 96px; text-align: center; font-size: 12px; font-weight: bold; color: #fff; }
 /* ASIDE */
 main { display: flex; min-height: calc(100vh - var(--altura-header)); }
 aside { flex: 0 0 var(--largura-aside); background: var(--cinza); text-align: center; }
@@ -31,9 +31,10 @@ aside a.ativo:hover { background: var(--azul-selecao); }
 .botao:hover { background: #c6d4e4; }
 .visualmente-oculto { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 @media (max-width: 600px) {
-    :root { --altura-header: 58px; }
-    .header nav { grid-template-columns: 70px 1fr; }
-    .logo { margin-left: 10px; width: 44px; height: 44px; }
+    :root { --altura-header: 100px; }
+    .header nav { grid-template-columns: 90px 1fr; }
+    .logo { margin-left: 10px; width: 80px; height: 80px; }
+    .logo-texto { height: 80px; font-size: 10px; }
     main { flex-direction: column; }
     aside { display: grid; grid-template-columns: 1fr 1fr; flex-basis: auto; }
     aside a { padding: 14px 6px; }
